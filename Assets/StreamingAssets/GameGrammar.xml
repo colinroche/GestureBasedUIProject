@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grammar version="1.0" xml:lang="en-US" mode="voice"
+         root="toplevel" tag-format="semantics/1.0"
+         xmlns="http://www.w3.org/2001/06/grammar" >
+
+  <rule id="toplevel" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#playstate" />
+      </item>
+      <item>
+        <ruleref uri="#difficultystate" />
+      </item>     
+      <item>
+        <ruleref uri="#colorstate" />
+      </item>
+      <item>
+        <ruleref uri="#pausestate" />
+      </item>
+      <item>
+        <ruleref uri="#rotatestate" />
+      </item>
+      <item>
+        <ruleref uri="#volumestate" />
+      </item>
+        
+    </one-of>
+  </rule>
+
+  <rule id="playstate">
+    <one-of>
+      <item>
+        <tag>out.action = "play";</tag>
+        <one-of>
+          <item> Play </item>
+          <item> Begin a new game </item>
+          <item> New game </item>
+          <item> I want to play </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "volume";</tag>
+        <one-of>
+          <item> Volume </item>
+          <item> Audio </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "back";</tag>
+        <one-of>
+          <item> Back </item>
+          <item> Return </item>
+          <item> Undo </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "quit";</tag>
+        <one-of>
+          <item> Quit </item>
+          <item> Finish </item>
+          <item> Bye </item>
+
+          <item> finish the game </item>
+          <item> exit game </item>
+          <item> I give up </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+    <rule id="difficultystate">
+    <one-of>
+      <item>
+        <tag>out.action = "easy";</tag>
+        <one-of>
+          <item> Easy </item>
+          <item> One </item>
+          <item> First </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "medium";</tag>
+        <one-of>
+          <item> Medium </item>
+          <item> Two </item>
+          <item> Second </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "hard";</tag>
+        <one-of>
+          <item> Hard </item>
+          <item> Three </item>
+          <item> Third </item>
+        </one-of>
+      </item>
+
+    </one-of>
+  </rule>
+
+   <rule id="colorstate">
+    <one-of>
+      <item>
+        <tag>out.action = "yellow";</tag>
+        <one-of>
+          <item> Yellow </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "green";</tag>
+        <one-of>
+          <item> Green </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "blue";</tag>
+        <one-of>
+          <item> Blue </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "red";</tag>
+        <one-of>
+          <item> Red </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "orange";</tag>
+        <one-of>
+          <item> Orange </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "purple";</tag>
+        <one-of>
+          <item> Purple </item>
+        </one-of>
+      </item>
+
+    </one-of>
+  </rule>
+
+   <rule id="pausestate">
+    <one-of>
+      <item>
+        <tag>out.action = "pause";</tag>
+        <one-of>
+          <item> Pause </item>
+          <item> Stop </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "start";</tag>
+        <one-of>
+          <item> Start </item>
+          <item> Begin </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "resume";</tag>
+        <one-of>
+          <item> Resume </item>
+          <item> Continue </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "menu";</tag>
+        <one-of>
+          <item> Menu </item>
+          <item> Main Menu </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "quit";</tag>
+        <one-of>
+          <item> Quit </item>
+          <item> Exit </item>
+        </one-of>
+      </item>
+
+    </one-of>
+  </rule>
+
+  <rule id="rotatestate">
+    <one-of>
+      <item> Rotate the colors </item>
+      <item> Move the colors </item>
+      <item> Change the colors </item>
+    </one-of>
+    <one-of>
+      <item> to </item>
+      <item> the </item>
+      <item> to the </item>
+    </one-of>
+    <ruleref uri="#rotateoptions" />
+  </rule>
+
+  <rule id="rotateoptions">
+    <one-of>
+      <item> Left <tag>out="left"</tag>
+    </item>
+      <item> Right <tag>out="right"</tag> </item>
+    </one-of>
+  </rule>
+
+  <rule id="volumestate">
+    <one-of>
+      <item> Change  </item>
+      <item> Adjust  </item>
+    </one-of>
+    <one-of>
+      <item> the volume </item>
+      <item> the sound </item>
+      <item> the audio </item>
+    </one-of>
+    <ruleref uri="#percentoptions" />
+  </rule>
+
+  <rule id="percentoptions">
+    <one-of>
+      <item> Off <tag>out="off"</tag>
+    </item>
+      <item> Twenty five <tag>out="twentyFive"</tag> 
+    </item>
+      <item> Fifty <tag>out="fifty"</tag> 
+    </item>
+      <item> Seventy Five <tag>out="seventyFive"</tag> 
+    </item>
+      <item> One Hundred  <tag>out="oneHundred"</tag> 
+    </item>
+    </one-of>
+  </rule>
+
+ 
+
+  
+
+</grammar>
+
+
+ 

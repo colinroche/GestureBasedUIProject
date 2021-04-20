@@ -52,6 +52,7 @@ public class MainMenuSpeechRecognition : MonoBehaviour
     {
         StringBuilder message = new StringBuilder();
         Debug.Log("Recognised a phrase");
+        Debug.Log("You said " + message);
         // read the semantic meanings from the args passed in.
         SemanticMeaning[] meanings = args.semanticMeanings;
 
