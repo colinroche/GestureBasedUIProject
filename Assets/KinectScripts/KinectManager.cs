@@ -1143,8 +1143,10 @@ public class KinectManager : MonoBehaviour
 				}
 					
 				// Check for complete gestures
-				foreach(KinectGestures.GestureData gestureData in player1Gestures)
+				for (int i = 0; i < player1Gestures.Count; i++)
 				{
+					KinectGestures.GestureData gestureData = player1Gestures[i];
+					
 					if(gestureData.complete)
 					{
 						if(gestureData.gesture == KinectGestures.Gestures.Click)
