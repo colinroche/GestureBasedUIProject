@@ -25,13 +25,24 @@ public class RobotLogic : MonoBehaviour
     public Text highScore;
     public int score;
 
+    public GameObject startButton;
+    public GameObject pauseButton;
+    private bool boolVal = true;
+
     public void Start()
     {
    
     }
 
-
-
+    void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            startButton.SetActive(!boolVal);
+            pauseButton.SetActive(!boolVal);
+            boolVal = !boolVal;
+        }     
+    }
 
 
 
