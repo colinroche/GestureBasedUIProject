@@ -34,6 +34,7 @@ public class RobotLogic : MonoBehaviour
     private bool pauseMenuBool = true;
     private int gemRotateVal = 0;
     [SerializeField] ParticleSystem gemExplosion;
+    [SerializeField] GameObject gem;
 
     public float speed;
     public float angularSpeed;
@@ -68,9 +69,15 @@ public class RobotLogic : MonoBehaviour
                 gemExplosion = GetComponent<ParticleSystem>();
                 audioSrc.PlayOneShot(gemBreakSFX);
                 gemExplosion.Play();
+                if(gem.tag == "Play"){
+                    print("play");
+                }else if(gem.tag == "Volume"){
+                    print("volume");
+                }else if(gem.tag == "Exit"){
+                    print("exit");
+                }
             }
             gemRotateVal = gemRotateVal + 20;
-
 
             //SceneManager.LoadScene(0);
         }
