@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 
 public class RobotLogic : MonoBehaviour
@@ -30,23 +32,36 @@ public class RobotLogic : MonoBehaviour
 
     public GameObject startGem;
     public GameObject pauseGem;
-    public GameObject pauseMenu;
+    public Rigidbody mainMenuGemRb;
     private bool spaceBool = true;
     private bool pauseMenuBool = true;
+    private int gemRotateVal = 0;
 
-
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        print("Collision");
-        startGem.SetActive(!pauseMenuBool);
-        pauseMenuBool = !pauseMenuBool;
-    }
+    public float speed;
+    public float angularSpeed;
     public void Start()
     {
-   
+        mainMenuGemRb = GetComponent<Rigidbody>();
     }
+
+    void FixedUpdate()
+    {
+        speed = mainMenuGemRb.velocity.magnitude;
+        angularSpeed = mainMenuGemRb.angularVelocity.magnitude / Mathf.PI * 2;
+        mainMenuGemRb.angularVelocity = new Vector3(0, Mathf.PI * gemRotateVal, 0);
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        print("Collision");
+        if(col.tag == "Sword")
+        {
+            gemRotateVal = gemRotateVal + 20;
+            //SceneManager.LoadScene(0);
+        }
+        
+    }
+ 
 
     void Update()
     {
