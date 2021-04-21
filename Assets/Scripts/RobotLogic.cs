@@ -27,8 +27,22 @@ public class RobotLogic : MonoBehaviour
 
     public GameObject startButton;
     public GameObject pauseButton;
-    private bool boolVal = true;
 
+    public GameObject startGem;
+    public GameObject pauseGem;
+    public GameObject pauseMenu;
+    private bool spaceBool = true;
+    private bool pauseMenuBool = true;
+
+
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        print("Collision");
+        startGem.SetActive(!pauseMenuBool);
+        pauseMenuBool = !pauseMenuBool;
+    }
     public void Start()
     {
    
@@ -38,9 +52,9 @@ public class RobotLogic : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            startButton.SetActive(!boolVal);
-            pauseButton.SetActive(!boolVal);
-            boolVal = !boolVal;
+            startButton.SetActive(!spaceBool);
+            pauseButton.SetActive(!spaceBool);
+            spaceBool = !spaceBool;
         }     
     }
 
