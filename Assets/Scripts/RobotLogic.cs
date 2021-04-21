@@ -21,24 +21,32 @@ public class RobotLogic : MonoBehaviour
     // Color changes each turn
     private int randomColor;
     // Menu
-    public Button StartButton;
-    public Text gameOverText;
-    public Text scoreText;
-    public Text highScore;
-    public int score;
+    [SerializeField]  Button StartButton;
+    [SerializeField]  Text gameOverText;
+    [SerializeField]  Text scoreText;
+    [SerializeField]  Text highScore;
+    [SerializeField]  int score;
 
-    public GameObject startButton;
-    public GameObject pauseButton;
+    [SerializeField]  GameObject startButton;
+    [SerializeField]  GameObject pauseButton;
 
-    public GameObject startGem;
-    public GameObject pauseGem;
-    public Rigidbody mainMenuGemRb;
+    [SerializeField]  GameObject startGem;
+    [SerializeField]  GameObject pauseGem;
+    [SerializeField]  Rigidbody mainMenuGemRb;
     private bool spaceBool = true;
     private bool pauseMenuBool = true;
     private int gemRotateVal = 0;
+    [SerializeField] ParticleSystem gemExplosion;
 
     public float speed;
     public float angularSpeed;
+    private float triggerCount = 0;
+    [SerializeField] AudioClip gemHitSFX;
+    [SerializeField] AudioClip gemBreakSFX;
+
+    [SerializeField] AudioSource audioSrc;
+
+
     public void Start()
     {
         mainMenuGemRb = GetComponent<Rigidbody>();
@@ -56,7 +64,17 @@ public class RobotLogic : MonoBehaviour
         print("Collision");
         if(col.tag == "Sword")
         {
+            triggerCount++;
+            audioSrc.PlayOneShot(gemHitSFX);
+            if(triggerCount == 3)
+            {
+                gemExplosion = GetComponent<ParticleSystem>();
+                audioSrc.PlayOneShot(gemBreakSFX);
+                gemExplosion.Play();
+            }
             gemRotateVal = gemRotateVal + 20;
+
+
             //SceneManager.LoadScene(0);
         }
         
