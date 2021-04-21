@@ -15,37 +15,32 @@ using UnityEngine.SceneManagement;
 
 public class GameSpeechRecognition : MonoBehaviour
 {
-    [SerializeField] GameObject Yellow;
-    [SerializeField] GameObject Green;
-    [SerializeField] GameObject Blue;
-    [SerializeField] GameObject Red;
-    [SerializeField] GameObject Orange;
-    [SerializeField] GameObject Purple;
-
-    [SerializeField] Material MatYellow;
-    [SerializeField] Material MatGreen;
-    [SerializeField] Material MatBlue;
-    [SerializeField] Material MatRed;
-    [SerializeField] Material MatOrange;
-    [SerializeField] Material MatPurple;
-
-    [SerializeField] Material MatYellowLight;
-    [SerializeField] Material MatGreenLight;
-    [SerializeField] Material MatBlueLight;
-    [SerializeField] Material MatRedLight;
-    [SerializeField] Material MatOrangeLight;
-    [SerializeField] Material MatPurpleLight;
-
+    
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
     private GrammarRecognizer gr;
 
     protected string color = "";
-
     [SerializeField] GameObject PauseMenu;
+        [SerializeField] GameObject AxeReal;
+    [SerializeField] GameObject AxeFake;
+    [SerializeField] GameObject ClubReal;
+    [SerializeField] GameObject ClubFake;
+    [SerializeField] GameObject DaggerReal;
+    [SerializeField] GameObject DaggerFake;
+    [SerializeField] GameObject HammerReal;
+    [SerializeField] GameObject HammerFake;
+    [SerializeField] GameObject ScytheReal;
+    [SerializeField] GameObject ScytheFake;
+    [SerializeField] GameObject SpearReal;
+    [SerializeField] GameObject SpearFake;
+    [SerializeField] GameObject SwordReal;
+    [SerializeField] GameObject SwordFake;
     [SerializeField] GameObject GamePanel;
+    public int savedVal = 0;
 
     public Vector3 savedPosition; // Position of first color to change with rotation for the last object
+
 
     private void Start()
     {   // Color objects
@@ -53,6 +48,14 @@ public class GameSpeechRecognition : MonoBehaviour
         // Game buttons
         actions.Add("start", StartGame);
         actions.Add("pause", Pause);
+
+        actions.Add("hammer", Hammer);
+        actions.Add("axe", Axe);
+        actions.Add("club", Club);
+        actions.Add("dagger", Dagger);
+        actions.Add("scythe", Scythe);
+        actions.Add("spear", Spear);
+        actions.Add("sword", Sword);
 
         // Pause menu buttons
         actions.Add("resume", Resume);
@@ -111,8 +114,92 @@ public class GameSpeechRecognition : MonoBehaviour
         Application.Quit();  
     }
 
-    // COLORS SPEECH RECOGNITION // 
+    // WEAPONS SPEECH RECOGNITION // 
    
+    public void Axe()
+    {
+        resetCurrentWeapon();
+        savedVal = 0;
+        AxeReal.SetActive(true);
+        AxeFake.SetActive(false);
+    }
+    public void Club()
+    {
+        resetCurrentWeapon();
+        savedVal = 1;
+        ClubReal.SetActive(true);
+        ClubFake.SetActive(false);
+    }
+    public void Dagger()
+    {
+        resetCurrentWeapon();
+        savedVal = 2;
+        DaggerReal.SetActive(true);
+        DaggerFake.SetActive(false);
+    }
+    public void Hammer()
+    {
+        resetCurrentWeapon();
+        savedVal = 3;
+        HammerReal.SetActive(true);
+        HammerFake.SetActive(false);
+    }
+
+
+    public void Scythe()
+    {
+        resetCurrentWeapon();
+        savedVal = 4;
+        ScytheReal.SetActive(true);
+        ScytheFake.SetActive(false);
+    }
+    public void Spear()
+    {
+        resetCurrentWeapon();
+        savedVal = 5;
+        SpearReal.SetActive(true);
+        SpearFake.SetActive(false);
+    }
+    public void Sword()
+    {
+        resetCurrentWeapon();
+        savedVal = 6;
+        SwordReal.SetActive(true);
+        SwordFake.SetActive(false);
+    }
+
+    public void resetCurrentWeapon()
+    {
+        if(savedVal == 0){
+            AxeReal.SetActive(false);
+            AxeFake.SetActive(true);
+        }else if(savedVal == 1){
+            print("Club");
+            ClubReal.SetActive(false);
+            ClubFake.SetActive(true);
+        }else if(savedVal == 2){
+            print("Dagger");
+            DaggerReal.SetActive(false);
+            DaggerFake.SetActive(true);
+        }else if(savedVal == 3){
+            print("Hammer");
+            HammerReal.SetActive(false);
+            HammerFake.SetActive(true);
+        }else if(savedVal == 4){
+            print("Scythe");
+            ScytheReal.SetActive(false);
+            ScytheFake.SetActive(true);
+        }else if(savedVal == 5){
+            print("Spear");
+            SpearReal.SetActive(false);
+            SpearFake.SetActive(true);
+        }else if(savedVal == 6){
+            print("Sword");
+            SwordReal.SetActive(false);
+            SwordFake.SetActive(true);
+        }
+    }
+
 
    
     private IEnumerator Click()

@@ -27,13 +27,10 @@ public class RobotLogic : MonoBehaviour
     [SerializeField]  Text highScore;
     [SerializeField]  int score;
 
-    [SerializeField]  GameObject startButton;
-    [SerializeField]  GameObject pauseButton;
 
     [SerializeField]  GameObject startGem;
     [SerializeField]  GameObject pauseGem;
     [SerializeField]  Rigidbody mainMenuGemRb;
-    private bool spaceBool = true;
     private bool pauseMenuBool = true;
     private int gemRotateVal = 0;
     [SerializeField] ParticleSystem gemExplosion;
@@ -81,15 +78,7 @@ public class RobotLogic : MonoBehaviour
     }
  
 
-    void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            startButton.SetActive(!spaceBool);
-            pauseButton.SetActive(!spaceBool);
-            spaceBool = !spaceBool;
-        }     
-    }
+ 
 
 
 

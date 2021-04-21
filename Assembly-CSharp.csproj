@@ -106,6 +106,7 @@
      <Compile Include="Assets\Imports\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Recognisers\Grammar Recogniser\GrammarController.cs" />
      <Compile Include="Assets\Recognisers\Keyword Recogniser\Scenes\CrossHair.cs" />
+     <Compile Include="Assets\Scripts\Dropdown.cs" />
      <Compile Include="Assets\Scripts\GameSpawn.cs" />
      <Compile Include="Assets\Scripts\GameSpeechRecognition.cs" />
      <Compile Include="Assets\Scripts\GemBehaviour.cs" />

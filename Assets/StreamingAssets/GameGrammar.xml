@@ -106,47 +106,53 @@
    <rule id="colorstate">
     <one-of>
       <item>
-        <tag>out.action = "yellow";</tag>
+        <tag>out.action = "hammer";</tag>
         <one-of>
-          <item> Yellow </item>
+          <item> Hammer </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "green";</tag>
+        <tag>out.action = "axe";</tag>
         <one-of>
-          <item> Green </item>
+          <item> Axe </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "blue";</tag>
+        <tag>out.action = "club";</tag>
         <one-of>
-          <item> Blue </item>
+          <item> Club </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "red";</tag>
+        <tag>out.action = "dagger";</tag>
         <one-of>
-          <item> Red </item>
+          <item> Dagger </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "orange";</tag>
+        <tag>out.action = "scythe";</tag>
         <one-of>
-          <item> Orange </item>
+          <item> Scythe </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "purple";</tag>
+        <tag>out.action = "spear";</tag>
         <one-of>
-          <item> Purple </item>
+          <item> Spear </item>
         </one-of>
       </item>
 
+      <item>
+        <tag>out.action = "sword";</tag>
+        <one-of>
+          <item> Sword </item>
+        </one-of>
+      </item>
     </one-of>
   </rule>
 

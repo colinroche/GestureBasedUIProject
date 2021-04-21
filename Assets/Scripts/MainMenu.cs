@@ -4,8 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-   public bool gamePaused = false;
+    public bool gamePaused = false;
     public GameObject pauseMenu;
+    [SerializeField]  GameObject UIToggle;
+    private bool spaceBool = true;
+
+    void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            UIToggle.SetActive(!spaceBool);
+            UIToggle.SetActive(!spaceBool);
+            spaceBool = !spaceBool;
+        }     
+    }
     public void PauseGame()   // To be called from Menu Resume button
     {
         pauseMenu.SetActive(true);
