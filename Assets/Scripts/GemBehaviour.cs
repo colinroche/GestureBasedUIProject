@@ -6,13 +6,12 @@ public class GemBehaviour : MonoBehaviour
 {
     private float speed = 1f;
     private float rotateSpeed = 100f;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        
+        gameObject.GetComponent<Rigidbody>().useGravity = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         this.transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
@@ -23,8 +22,20 @@ public class GemBehaviour : MonoBehaviour
     {
         if (other.tag == "MaxHeight")
         {
-            speed = 0f;
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+            StartCoroutine(GemSpeed());
         }
+
+        if (other.tag == "Sword")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    IEnumerator GemSpeed()
+    {
+        speed = 0.5f;
+        yield return new WaitForSeconds(0.3f);
+        speed = 0f;
     }
 }

@@ -17,7 +17,7 @@ public class SpawnLevel : MonoBehaviour
 
     public void FirstLevelSpawning()
     {
-        numGems = 5;
+        numGems = 50;
 
         gemSpawner.GemLowSpawner(numGems);
     }
