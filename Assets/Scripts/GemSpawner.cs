@@ -7,10 +7,15 @@ public class GemSpawner : MonoBehaviour
     [SerializeField] Transform parentItem;
     private Vector3 position;
 
-    private float sideOffset = 1.5f;
+    private float sideOffset = 1.2f;
     private float forwardOffset = 1f;
 
     private float time;
+
+    private int whiteGem = 5;
+    private int yellowGem = 10;
+    private int blueGem = 20;
+    private int purpleGem = 50;
 
     [SerializeField] GameObject player;
     // Start is called before the first frame update

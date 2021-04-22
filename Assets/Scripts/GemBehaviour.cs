@@ -7,6 +7,8 @@ public class GemBehaviour : MonoBehaviour
     private float speed = 1f;
     private float rotateSpeed = 100f;
     
+    private int gemValue = 0;
+    
     void Start()
     {
         gameObject.GetComponent<Rigidbody>().useGravity = false;
@@ -28,6 +30,23 @@ public class GemBehaviour : MonoBehaviour
 
         if (other.tag == "Sword")
         {
+            if (gameObject.tag == "White")
+            {
+                gemValue = 5;
+            }
+            else if (gameObject.tag == "Yellow")
+            {
+                gemValue = 10;
+            }
+            else if (gameObject.tag == "Blue")
+            {
+                gemValue = 20;
+            }
+            else if (gameObject.tag == "Purple")
+            {
+                gemValue = 50;
+            }
+            FindObjectOfType<GameSession>().AddScore(gemValue);
             Destroy(gameObject);
         }
     }
@@ -38,4 +57,5 @@ public class GemBehaviour : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         speed = 0f;
     }
+
 }
