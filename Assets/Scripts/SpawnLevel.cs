@@ -19,6 +19,15 @@ public class SpawnLevel : MonoBehaviour
     {
         numGems = 50;
 
-        gemSpawner.GemLowSpawner(numGems);
+        gemSpawner.GemWhiteSpawner(numGems);
+
+        numGems = 20;
+        gemSpawner.GemYellowSpawner(numGems);
+
+        numGems = 10;
+        gemSpawner.GemBlueSpawner(numGems);
+
+        numGems = 5;
+        gemSpawner.GemPurpleSpawner(numGems);
     }
 }
