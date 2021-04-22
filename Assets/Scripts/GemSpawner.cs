@@ -8,7 +8,11 @@ public class GemSpawner : MonoBehaviour
     private Vector3 position;
 
     private float sideOffset = 1.2f;
-    private float forwardOffset = 1f;
+    private float forwardOffset;
+
+    private float check1 = 0.5f;
+    private float check2 = 0.75f;
+    private float check3 = 1f;
 
     private float time;
 
@@ -40,13 +44,30 @@ public class GemSpawner : MonoBehaviour
         int spawned = 0;
         while (spawned < numOfObjects)
         {
-
-            float leftRange = player.transform.position.x - sideOffset;
-            float rightRange = player.transform.position.x + sideOffset;
-            float forwardRange =  player.transform.position.z + forwardOffset;
-
             yield return new WaitForSeconds(time);
-            position = new Vector3(Random.Range(rightRange, leftRange),0.2f, forwardRange);
+            float posX = Random.Range(-sideOffset, sideOffset);
+            
+            if (posX > check3 || posX < -check3)
+            {
+                forwardOffset = 0.25f;
+                Debug.Log(forwardOffset);
+            }
+            else if (posX > check2 || posX < -check2)
+            {
+                forwardOffset = 0.5f;
+                Debug.Log(forwardOffset);
+            }
+            else if (posX > check1 || posX < -check1)
+            {
+                forwardOffset = 0.75f;
+                Debug.Log(forwardOffset);
+            }
+            else {
+                forwardOffset = 1.0f;
+                Debug.Log(forwardOffset);
+            }
+            
+            position = new Vector3(posX, 0.2f, forwardOffset);
             spawned++;
 
             Transform spawn = Instantiate(transform, position, Quaternion.identity);

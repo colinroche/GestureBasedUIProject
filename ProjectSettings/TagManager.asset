@@ -9,6 +9,10 @@ TagManager:
   - Play
   - Volume
   - Exit
+  - White
+  - Yellow
+  - Blue
+  - Purple
   layers:
   - Default
   - TransparentFX
