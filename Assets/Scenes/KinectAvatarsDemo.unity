@@ -662,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &332798146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3849,11 +3849,15 @@ MonoBehaviour:
   pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
   gemExplosion: {fileID: 0}
+  gem: {fileID: 0}
+  mainMenuGems: {fileID: 0}
+  levelSelectGems: {fileID: 0}
   speed: 0
   angularSpeed: 0
   gemHitSFX: {fileID: 8300000, guid: a11f29b8ca24247b0bcb1fb9d4169b4b, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   audioSrc: {fileID: 40332467}
+  anim: {fileID: 0}
 --- !u!199 &1585740976
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -10292,11 +10296,15 @@ MonoBehaviour:
   pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
   gemExplosion: {fileID: 0}
+  gem: {fileID: 0}
+  mainMenuGems: {fileID: 0}
+  levelSelectGems: {fileID: 0}
   speed: 0
   angularSpeed: 0
   gemHitSFX: {fileID: 0}
   gemBreakSFX: {fileID: 0}
   audioSrc: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!54 &2103404485
 Rigidbody:
   m_ObjectHideFlags: 0

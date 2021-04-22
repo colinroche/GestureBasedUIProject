@@ -35,7 +35,8 @@ public class RobotLogic : MonoBehaviour
     private int gemRotateVal = 0;
     [SerializeField] ParticleSystem gemExplosion;
     [SerializeField] GameObject gem;
-
+    [SerializeField] GameObject mainMenuGems;
+    [SerializeField] GameObject levelSelectGems;
     public float speed;
     public float angularSpeed;
     private float triggerCount = 0;
@@ -43,6 +44,7 @@ public class RobotLogic : MonoBehaviour
     [SerializeField] AudioClip gemBreakSFX;
 
     [SerializeField] AudioSource audioSrc;
+    [SerializeField] Animation anim;
 
 
     public void Start()
@@ -69,10 +71,17 @@ public class RobotLogic : MonoBehaviour
                 gemExplosion = GetComponent<ParticleSystem>();
                 audioSrc.PlayOneShot(gemBreakSFX);
                 gemExplosion.Play();
+                StartCoroutine(GemExplosionDelay());
                 if(gem.tag == "Play"){
                     print("play");
+                    mainMenuGems.SetActive(false);
+                    levelSelectGems.SetActive(true);
+                    anim.Play();
                 }else if(gem.tag == "Volume"){
                     print("volume");
+                    mainMenuGems.SetActive(false);
+                    levelSelectGems.SetActive(true);
+                    anim.Play();
                 }else if(gem.tag == "Exit"){
                     print("exit");
                 }
@@ -82,6 +91,18 @@ public class RobotLogic : MonoBehaviour
             //SceneManager.LoadScene(0);
         }
         
+    }
+
+    IEnumerator GemExplosionDelay()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
  
 
