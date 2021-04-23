@@ -7,12 +7,11 @@ public class GemSpawner : MonoBehaviour
     [SerializeField] Transform parentItem;
     private Vector3 position;
 
-    private float sideOffset = 1.2f;
+    private float sideOffset = 1f;
     private float forwardOffset;
 
     private float check1 = 0.5f;
     private float check2 = 0.75f;
-    private float check3 = 1f;
 
     private float time;
 
@@ -47,24 +46,16 @@ public class GemSpawner : MonoBehaviour
             yield return new WaitForSeconds(time);
             float posX = Random.Range(-sideOffset, sideOffset);
             
-            if (posX > check3 || posX < -check3)
-            {
-                forwardOffset = 0.25f;
-                Debug.Log(forwardOffset);
-            }
-            else if (posX > check2 || posX < -check2)
+            if (posX > check2 || posX < -check2)
             {
                 forwardOffset = 0.5f;
-                Debug.Log(forwardOffset);
             }
             else if (posX > check1 || posX < -check1)
             {
                 forwardOffset = 0.75f;
-                Debug.Log(forwardOffset);
             }
             else {
                 forwardOffset = 1.0f;
-                Debug.Log(forwardOffset);
             }
             
             position = new Vector3(posX, 0.2f, forwardOffset);
@@ -106,5 +97,13 @@ public class GemSpawner : MonoBehaviour
         Transform gems;
         gems = GameObject.Find("GemPurple").transform;
         Spawner(gems, numGems, time);
+    }
+
+    public void BombSpawner(int numBombs)
+    {
+        time = 8f;
+        Transform bombs;
+        bombs = GameObject.Find("Bomb").transform;
+        Spawner(bombs, numBombs, time);
     }
 }

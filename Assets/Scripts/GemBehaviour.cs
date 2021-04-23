@@ -63,8 +63,13 @@ public class GemBehaviour : MonoBehaviour
                 audioSrc.PlayOneShot(gemBreakSFX);
                 gemExplosion.Play();
             }
+            else if (gameObject.tag == "Bomb")
+            {
+                gemValue = 0;
+                FindObjectOfType<GameSession>().BombCheck();
+            }
             FindObjectOfType<GameSession>().AddScore(gemValue);
-            Destroy(gameObject, 1.0f);
+            Destroy(gameObject, 0.25f);
         }
     }
 

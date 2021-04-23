@@ -16,6 +16,7 @@ TagManager:
   - Arcade
   - Classic
   - Zen
+  - Bomb
   layers:
   - Default
   - TransparentFX

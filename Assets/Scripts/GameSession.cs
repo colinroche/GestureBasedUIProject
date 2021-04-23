@@ -9,6 +9,8 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMesh scoreText;
 
     int playerScore = 0;
+    int bombCount = 0;
+    int endGame = 3;
     private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -30,6 +32,19 @@ public class GameSession : MonoBehaviour
     {
         playerScore += scoreValue;
         scoreText.text = playerScore.ToString();
+    }
+
+    public void BombCheck() {
+        bombCount++;
+        if (bombCount >= endGame)
+        {
+            EndGame();
+        }
+    }
+
+    public void EndGame()
+    {
+        Time.timeScale = 0f;
     }
 
     // Update is called once per frame
