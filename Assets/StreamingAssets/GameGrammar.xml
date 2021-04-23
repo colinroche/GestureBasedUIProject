@@ -9,7 +9,7 @@
         <ruleref uri="#playstate" />
       </item>
       <item>
-        <ruleref uri="#difficultystate" />
+        <ruleref uri="#gamestate" />
       </item>     
       <item>
         <ruleref uri="#colorstate" />
@@ -36,6 +36,14 @@
           <item> Begin a new game </item>
           <item> New game </item>
           <item> I want to play </item>
+        </one-of>
+      </item>
+
+      <item>
+        <tag>out.action = "gameUI";</tag>
+        <one-of>
+          <item> Toggle </item>
+          <item> User Interface </item>
         </one-of>
       </item>
 
@@ -71,32 +79,26 @@
     </one-of>
   </rule>
 
-    <rule id="difficultystate">
+    <rule id="gamestate">
     <one-of>
       <item>
-        <tag>out.action = "easy";</tag>
+        <tag>out.action = "arcade";</tag>
         <one-of>
-          <item> Easy </item>
-          <item> One </item>
-          <item> First </item>
+          <item> Arcade </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "medium";</tag>
+        <tag>out.action = "classic";</tag>
         <one-of>
-          <item> Medium </item>
-          <item> Two </item>
-          <item> Second </item>
+          <item> Classic </item>
         </one-of>
       </item>
 
       <item>
-        <tag>out.action = "hard";</tag>
+        <tag>out.action = "zen";</tag>
         <one-of>
-          <item> Hard </item>
-          <item> Three </item>
-          <item> Third </item>
+          <item> Zen </item>
         </one-of>
       </item>
 

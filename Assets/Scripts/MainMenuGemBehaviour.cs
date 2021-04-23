@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MainMenuGemBehaviour : MonoBehaviour
 {
     [SerializeField]  Rigidbody mainMenuGemRb;
-    private bool pauseMenuBool = true;
+    private bool pauseMenuBool = false;
     private int gemRotateVal = 0;
     [SerializeField] GameObject gem;
 

@@ -11693,6 +11693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabf7125b81415f46a50883029b8df0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIToggle: {fileID: 766511375}
   DifficultyMenu: {fileID: 1083040816}
   MainMenu: {fileID: 1961293110}
   LeaderboardMenu: {fileID: 1789987947}

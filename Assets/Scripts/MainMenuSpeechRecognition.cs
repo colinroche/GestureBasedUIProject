@@ -14,23 +14,26 @@ public class MainMenuSpeechRecognition : MonoBehaviour
 {
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
     private GrammarRecognizer gr;
-
-    public GameObject DifficultyMenu;
-    public GameObject MainMenu;
-    public GameObject LeaderboardMenu;
+    [SerializeField]  GameObject UIToggle;
+    private bool spaceBool = false;
+    [SerializeField] GameObject DifficultyMenu;
+    [SerializeField] GameObject MainMenu;
+    [SerializeField] GameObject LeaderboardMenu;
     [SerializeField] VolumeSlider volumeSlider = new VolumeSlider();
     SoundManager soundManager = new SoundManager();
+    
 
     private void Start()
     {   // Main menu buttons
+        actions.Add("gameUI", GameUI);
         actions.Add("play", Play);
         actions.Add("volume", Leaderboard);
         actions.Add("quit", Quit);
         actions.Add("back", Back);
 
-        actions.Add("easy", Easy);
-        actions.Add("medium", Medium);
-        actions.Add("hard", Hard);
+        actions.Add("arcade", Arcade);
+        actions.Add("classic", Classic);
+        actions.Add("zen", Zen);
 
         actions.Add("off", Off);
         actions.Add("twentyFive", TwentyFive);
@@ -68,7 +71,13 @@ public class MainMenuSpeechRecognition : MonoBehaviour
         // use a string builder to create the string and out put to the user
         Debug.Log(message);
     }
-
+    private void GameUI()
+    {
+        print("gooo");
+        UIToggle.SetActive(!spaceBool);
+        UIToggle.SetActive(!spaceBool);
+        spaceBool = !spaceBool;
+    }
     private void Play()
     {
         MainMenu.SetActive(false);
@@ -91,17 +100,17 @@ public class MainMenuSpeechRecognition : MonoBehaviour
         Application.Quit();  
     }
 
-    private void Easy()
+    private void Arcade()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
     }
   
-    private void Medium()
+    private void Classic()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 2);
     }
 
-    private void Hard()
+    private void Zen()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 3);
     }
