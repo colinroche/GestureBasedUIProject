@@ -13,6 +13,9 @@ TagManager:
   - Yellow
   - Blue
   - Purple
+  - Arcade
+  - Classic
+  - Zen
   layers:
   - Default
   - TransparentFX

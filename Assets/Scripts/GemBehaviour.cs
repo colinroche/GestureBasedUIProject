@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class GemBehaviour : MonoBehaviour
 {
+    [SerializeField] ParticleSystem gemExplosion;
+    [SerializeField] GameObject gem;
+    [SerializeField] AudioClip gemBreakSFX;
+
+    [SerializeField] AudioSource audioSrc;
+    [SerializeField] Animation anim;
     private float speed = 1f;
     private float rotateSpeed = 100f;
-    
     private int gemValue = 0;
     
     void Start()
@@ -33,21 +38,33 @@ public class GemBehaviour : MonoBehaviour
             if (gameObject.tag == "White")
             {
                 gemValue = 5;
+                gemExplosion = GetComponent<ParticleSystem>();
+                audioSrc.PlayOneShot(gemBreakSFX);
+                gemExplosion.Play();
             }
             else if (gameObject.tag == "Yellow")
             {
                 gemValue = 10;
+                gemExplosion = GetComponent<ParticleSystem>();
+                audioSrc.PlayOneShot(gemBreakSFX);
+                gemExplosion.Play();
             }
             else if (gameObject.tag == "Blue")
             {
                 gemValue = 20;
+                gemExplosion = GetComponent<ParticleSystem>();
+                audioSrc.PlayOneShot(gemBreakSFX);
+                gemExplosion.Play();
             }
             else if (gameObject.tag == "Purple")
             {
                 gemValue = 50;
+                gemExplosion = GetComponent<ParticleSystem>();
+                audioSrc.PlayOneShot(gemBreakSFX);
+                gemExplosion.Play();
             }
             FindObjectOfType<GameSession>().AddScore(gemValue);
-            Destroy(gameObject);
+            Destroy(gameObject, 1.0f);
         }
     }
 

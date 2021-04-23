@@ -798,32 +798,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 507842301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdeec7eb6328474687ba911e3fb60d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 41bd97367ef5bf54db7be63806d8b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList: 
-  showtime: 0.5
-  pausetime: 0.5
-  level: 2
-  player: 0
-  StartButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScore: {fileID: 0}
-  score: 0
-  startGem: {fileID: 0}
-  pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
-  gemExplosion: {fileID: 0}
   gem: {fileID: 507842301}
-  mainMenuGems: {fileID: 813358090}
+  mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  audioSrc: {fileID: 1137115742}
+  anim: {fileID: 0}
+  gemHitSFX: {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
+  gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
   speed: 0
   angularSpeed: 0
-  gemHitSFX: {fileID: 8300000, guid: a3260b6f2f81b443c9a50a4222b21f64, type: 3}
-  gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
-  audioSrc: {fileID: 919408909}
-  anim: {fileID: 0}
 --- !u!199 &507842304
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5511,7 +5498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1184595701412858, guid: 924aaf6a1ea454b4dbf94f71f2fe7788, type: 3}
       propertyPath: m_TagString
-      value: Volume
+      value: Classic
       objectReference: {fileID: 0}
     - target: {fileID: 4792324912153270, guid: 924aaf6a1ea454b4dbf94f71f2fe7788, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5582,7 +5569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748422982061114, guid: 1c4475a9c1bc64df9a370603d23955c7, type: 3}
       propertyPath: m_TagString
-      value: Exit
+      value: Zen
       objectReference: {fileID: 0}
     - target: {fileID: 4674998090013460, guid: 1c4475a9c1bc64df9a370603d23955c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5902,32 +5889,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 677111174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdeec7eb6328474687ba911e3fb60d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 41bd97367ef5bf54db7be63806d8b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList: 
-  showtime: 0.5
-  pausetime: 0.5
-  level: 2
-  player: 0
-  StartButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScore: {fileID: 0}
-  score: 0
-  startGem: {fileID: 0}
-  pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
-  gemExplosion: {fileID: 0}
   gem: {fileID: 677111174}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
-  speed: 0
-  angularSpeed: 0
+  audioSrc: {fileID: 1137115742}
+  anim: {fileID: 0}
   gemHitSFX: {fileID: 8300000, guid: 0f579092c76764d8e8df04853e9a2c13, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
-  audioSrc: {fileID: 919408909}
-  anim: {fileID: 0}
+  speed: 0
+  angularSpeed: 0
 --- !u!199 &677111177
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -11648,6 +11622,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099481625}
   m_CullTransparentMesh: 0
+--- !u!82 &1137115742 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4167394356308643362, guid: b212149c591bdd94a9b56a23d47a30db,
+    type: 3}
+  m_PrefabInstance: {fileID: 4167394354999484126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1177341856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12393,32 +12373,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498699538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdeec7eb6328474687ba911e3fb60d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 41bd97367ef5bf54db7be63806d8b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList: 
-  showtime: 0.5
-  pausetime: 0.5
-  level: 2
-  player: 0
-  StartButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScore: {fileID: 0}
-  score: 0
-  startGem: {fileID: 0}
-  pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
-  gemExplosion: {fileID: 0}
   gem: {fileID: 1498699538}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  audioSrc: {fileID: 1137115742}
+  anim: {fileID: 813358092}
+  gemHitSFX: {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
+  gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
-  gemHitSFX: {fileID: 8300000, guid: a11f29b8ca24247b0bcb1fb9d4169b4b, type: 3}
-  gemBreakSFX: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
-  audioSrc: {fileID: 919408909}
-  anim: {fileID: 0}
 --- !u!199 &1498699542
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -17229,32 +17196,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1505084343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdeec7eb6328474687ba911e3fb60d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 41bd97367ef5bf54db7be63806d8b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList: 
-  showtime: 0.5
-  pausetime: 0.5
-  level: 2
-  player: 0
-  StartButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScore: {fileID: 0}
-  score: 0
-  startGem: {fileID: 0}
-  pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
-  gemExplosion: {fileID: 0}
   gem: {fileID: 1505084343}
-  mainMenuGems: {fileID: 548911488}
-  levelSelectGems: {fileID: 813358090}
+  mainMenuGems: {fileID: 0}
+  levelSelectGems: {fileID: 0}
+  audioSrc: {fileID: 1137115742}
+  anim: {fileID: 813358092}
+  gemHitSFX: {fileID: 8300000, guid: 0f579092c76764d8e8df04853e9a2c13, type: 3}
+  gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
-  gemHitSFX: {fileID: 8300000, guid: 0f579092c76764d8e8df04853e9a2c13, type: 3}
-  gemBreakSFX: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
-  audioSrc: {fileID: 919408909}
-  anim: {fileID: 813358092}
 --- !u!199 &1505084347
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -22093,7 +22047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1099584938433210, guid: eab4abe6f8de141a38fac6bc30739d37, type: 3}
       propertyPath: m_TagString
-      value: Play
+      value: Arcade
       objectReference: {fileID: 0}
     - target: {fileID: 4037704444667920, guid: eab4abe6f8de141a38fac6bc30739d37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22265,32 +22219,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1686708516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdeec7eb6328474687ba911e3fb60d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 41bd97367ef5bf54db7be63806d8b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList: 
-  showtime: 0.5
-  pausetime: 0.5
-  level: 2
-  player: 0
-  StartButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScore: {fileID: 0}
-  score: 0
-  startGem: {fileID: 0}
-  pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
-  gemExplosion: {fileID: 0}
   gem: {fileID: 1686708516}
-  mainMenuGems: {fileID: 813358090}
+  mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  audioSrc: {fileID: 1137115742}
+  anim: {fileID: 0}
+  gemHitSFX: {fileID: 8300000, guid: a3260b6f2f81b443c9a50a4222b21f64, type: 3}
+  gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
   speed: 0
   angularSpeed: 0
-  gemHitSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
-  gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
-  audioSrc: {fileID: 919408909}
-  anim: {fileID: 0}
 --- !u!199 &1686708519
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -27956,32 +27897,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2014671831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdeec7eb6328474687ba911e3fb60d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 41bd97367ef5bf54db7be63806d8b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorList: 
-  showtime: 0.5
-  pausetime: 0.5
-  level: 2
-  player: 0
-  StartButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScore: {fileID: 0}
-  score: 0
-  startGem: {fileID: 0}
-  pauseGem: {fileID: 0}
   mainMenuGemRb: {fileID: 0}
-  gemExplosion: {fileID: 0}
   gem: {fileID: 2014671831}
   mainMenuGems: {fileID: 548911488}
   levelSelectGems: {fileID: 813358090}
+  audioSrc: {fileID: 1137115742}
+  anim: {fileID: 813358092}
+  gemHitSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
+  gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
-  gemHitSFX: {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
-  gemBreakSFX: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
-  audioSrc: {fileID: 919408909}
-  anim: {fileID: 813358092}
 --- !u!199 &2014671835
 ParticleSystemRenderer:
   serializedVersion: 6
