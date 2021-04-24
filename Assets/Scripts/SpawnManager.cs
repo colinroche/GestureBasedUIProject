@@ -9,7 +9,6 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         gameSpawn = GetComponent<GameSpawn>();
-        SpawningGame();
     }
 
     // Update is called once per frame
@@ -18,8 +17,9 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    public void SpawningGame()
+    public void SpawningClassicGame()
     {
+        Debug.Log("Checker");
         gameSpawn.Level1();
     }
 }

@@ -10,10 +10,13 @@ public class MainMenuGemBehaviour : MonoBehaviour
     [SerializeField]  Rigidbody mainMenuGemRb;
     private bool pauseMenuBool = false;
     private int gemRotateVal = 0;
+
+    private int removeGems = 0;
     [SerializeField] GameObject gem;
 
     [SerializeField] GameObject mainMenuGems;
     [SerializeField] GameObject levelSelectGems;
+    [SerializeField] GameObject spawnGems;
     [SerializeField] AudioSource audioSrc;
     [SerializeField] Animation anim;
     [SerializeField] AudioClip gemHitSFX;
@@ -24,6 +27,8 @@ public class MainMenuGemBehaviour : MonoBehaviour
     public float speed;
     public float angularSpeed;
     private float triggerCount = 0;
+
+    public SpawnManager spawnManager;
 
     public void Start()
     {
@@ -73,18 +78,26 @@ public class MainMenuGemBehaviour : MonoBehaviour
                     print("zed mode");
                     Destroy(gameObject, 2.0f);
                     SceneManager.LoadScene(3);
+                }else if(gem.tag == "Start"){
+                    print("Start mode");
+                    StartCoroutine(RemoveMenuGems());
+                    spawnGems.SetActive(true);
+                    spawnManager.SpawningClassicGame();
+                }else if(gem.tag == "MainMenu"){
+                    print("MainMenu mode");
+                    StartCoroutine(RemoveMenuGems());
                 }
 
             }
             gemRotateVal = gemRotateVal + 20;
         }
-        
     }
 
- 
-
- 
-
-
+    IEnumerator RemoveMenuGems()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("Working");
+        mainMenuGems.SetActive(false);
+    }
 
 }

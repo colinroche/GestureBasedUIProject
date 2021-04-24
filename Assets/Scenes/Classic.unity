@@ -810,7 +810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &178724397
 Transform:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206809907}
   m_LocalRotation: {x: 0, y: 0.01745245, z: 0, w: 0.99984777}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0.723}
+  m_LocalPosition: {x: 1, y: 0, z: 0.723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1585740972}
@@ -3025,12 +3025,14 @@ MonoBehaviour:
   gem: {fileID: 791429757}
   mainMenuGems: {fileID: 206809907}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 178724396}
   audioSrc: {fileID: 40332467}
   anim: {fileID: 0}
   gemHitSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 1889076606}
 --- !u!4 &796277137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400036, guid: ed1c50b3cebc9374f9da79ca55dd4e4b,
@@ -9193,9 +9195,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuGem
       objectReference: {fileID: 0}
+    - target: {fileID: 1012589614496524, guid: fba86566244f643ce94d8d0c62a64300, type: 3}
+      propertyPath: m_TagString
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 4254400083314896, guid: fba86566244f643ce94d8d0c62a64300, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.133
+      value: 0.047
       objectReference: {fileID: 0}
     - target: {fileID: 4254400083314896, guid: fba86566244f643ce94d8d0c62a64300, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9203,7 +9209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4254400083314896, guid: fba86566244f643ce94d8d0c62a64300, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.271
+      value: 0.263
       objectReference: {fileID: 0}
     - target: {fileID: 4254400083314896, guid: fba86566244f643ce94d8d0c62a64300, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10475,12 +10481,14 @@ MonoBehaviour:
   gem: {fileID: 1585740969}
   mainMenuGems: {fileID: 206809907}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 178724396}
   audioSrc: {fileID: 40332467}
   anim: {fileID: 0}
   gemHitSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &1585740976
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -25154,7 +25162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentItem: {fileID: 1340208868}
-  player: {fileID: 0}
+  player: {fileID: 810951791}
 --- !u!114 &1889076605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31816,10 +31824,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartGem
       objectReference: {fileID: 0}
+    - target: {fileID: 8577899802575533097, guid: 598ca7c8be3d2cd488e1d9a22ecf37bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Start
+      objectReference: {fileID: 0}
     - target: {fileID: 8583374823573167047, guid: 598ca7c8be3d2cd488e1d9a22ecf37bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.596
+      value: -1.424
       objectReference: {fileID: 0}
     - target: {fileID: 8583374823573167047, guid: 598ca7c8be3d2cd488e1d9a22ecf37bc,
         type: 3}
@@ -31829,7 +31842,7 @@ PrefabInstance:
     - target: {fileID: 8583374823573167047, guid: 598ca7c8be3d2cd488e1d9a22ecf37bc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.21
+      value: 0.164
       objectReference: {fileID: 0}
     - target: {fileID: 8583374823573167047, guid: 598ca7c8be3d2cd488e1d9a22ecf37bc,
         type: 3}
