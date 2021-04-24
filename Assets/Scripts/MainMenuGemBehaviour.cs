@@ -16,7 +16,7 @@ public class MainMenuGemBehaviour : MonoBehaviour
 
     [SerializeField] GameObject mainMenuGems;
     [SerializeField] GameObject levelSelectGems;
-    
+    [SerializeField] GameObject timeText;
     [SerializeField] GameObject spawnGems;
     [SerializeField] AudioSource audioSrc;
     [SerializeField] Animation anim;
@@ -85,6 +85,13 @@ public class MainMenuGemBehaviour : MonoBehaviour
                     StartCoroutine(RemoveMenuGems());
                     spawnGems.SetActive(true);
                     spawnManager.SpawningClassicGame();
+                }else if(gem.tag == "StartArcade"){
+                    print("Start mode");
+                    StartCoroutine(RemoveMenuGems());
+                    spawnGems.SetActive(true);
+                    spawnManager.SpawningClassicGame();
+                    StartCoroutine(StartTimer());
+                    timeText.SetActive(true);
                 }else if(gem.tag == "MainMenu"){
                     print("MainMenu mode");
                     StartCoroutine(RemoveMenuGems());
@@ -101,5 +108,11 @@ public class MainMenuGemBehaviour : MonoBehaviour
         Debug.Log("Working");
         mainMenuGems.SetActive(false);
     }
+    IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(1.0f);
+        timeText.SetActive(true);
+    }
+
 
 }

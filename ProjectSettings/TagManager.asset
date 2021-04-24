@@ -19,6 +19,7 @@ TagManager:
   - Bomb
   - Start
   - MainMenu
+  - StartArcade
   layers:
   - Default
   - TransparentFX
