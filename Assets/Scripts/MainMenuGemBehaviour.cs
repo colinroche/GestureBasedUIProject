@@ -16,13 +16,13 @@ public class MainMenuGemBehaviour : MonoBehaviour
 
     [SerializeField] GameObject mainMenuGems;
     [SerializeField] GameObject levelSelectGems;
+    
     [SerializeField] GameObject spawnGems;
     [SerializeField] AudioSource audioSrc;
     [SerializeField] Animation anim;
     [SerializeField] AudioClip gemHitSFX;
     [SerializeField] AudioClip gemBreakSFX;
     private ParticleSystem gemExplosion;
-
 
     public float speed;
     public float angularSpeed;
@@ -33,6 +33,7 @@ public class MainMenuGemBehaviour : MonoBehaviour
     public void Start()
     {
         mainMenuGemRb = GetComponent<Rigidbody>();
+        gemRotateVal = 1;
     }
 
     void FixedUpdate()
@@ -51,6 +52,7 @@ public class MainMenuGemBehaviour : MonoBehaviour
             audioSrc.PlayOneShot(gemHitSFX);
             if(triggerCount == 3)
             {
+                triggerCount = 0;
                 gemExplosion = GetComponent<ParticleSystem>();
                 audioSrc.PlayOneShot(gemBreakSFX);
                 gemExplosion.Play();
@@ -95,7 +97,7 @@ public class MainMenuGemBehaviour : MonoBehaviour
 
     IEnumerator RemoveMenuGems()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         Debug.Log("Working");
         mainMenuGems.SetActive(false);
     }

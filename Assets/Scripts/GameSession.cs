@@ -11,6 +11,9 @@ public class GameSession : MonoBehaviour
     [SerializeField] GameObject strikeLeft;
     [SerializeField] GameObject strikeMiddle;
     [SerializeField] GameObject strikeRight;
+    [SerializeField] GameObject mainMenuGems;
+    [SerializeField] GameObject spawnGems;
+
 
     int playerScore = 0;
     int bombCount = 0;
@@ -61,7 +64,9 @@ public class GameSession : MonoBehaviour
 
     public void EndGame()
     {
-        Time.timeScale = 0f;
+        mainMenuGems.SetActive(true);
+        spawnGems.SetActive(false);
+
     }
 
     // Update is called once per frame

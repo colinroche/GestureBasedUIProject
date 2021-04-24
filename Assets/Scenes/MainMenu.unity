@@ -1349,12 +1349,14 @@ MonoBehaviour:
   gem: {fileID: 507842301}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 0}
   audioSrc: {fileID: 1137115742}
   anim: {fileID: 0}
   gemHitSFX: {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &507842304
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -6344,7 +6346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &548911489
 Transform:
   m_ObjectHideFlags: 0
@@ -6539,12 +6541,14 @@ MonoBehaviour:
   gem: {fileID: 677111174}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 0}
   audioSrc: {fileID: 1137115742}
   anim: {fileID: 0}
   gemHitSFX: {fileID: 8300000, guid: 0f579092c76764d8e8df04853e9a2c13, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &677111177
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -11521,7 +11525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &813358091
 Transform:
   m_ObjectHideFlags: 0
@@ -11530,7 +11534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813358090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.3, z: 0.916}
+  m_LocalPosition: {x: 0, y: 4.71, z: 0.916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 507842302}
@@ -13986,12 +13990,14 @@ MonoBehaviour:
   gem: {fileID: 1498699538}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 0}
   audioSrc: {fileID: 1137115742}
   anim: {fileID: 813358092}
   gemHitSFX: {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &1498699542
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -18809,12 +18815,14 @@ MonoBehaviour:
   gem: {fileID: 1505084343}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 0}
   audioSrc: {fileID: 1137115742}
   anim: {fileID: 813358092}
   gemHitSFX: {fileID: 8300000, guid: 0f579092c76764d8e8df04853e9a2c13, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &1505084347
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -23902,7 +23910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576540351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.247, y: 1.59, z: -0.11}
+  m_LocalPosition: {x: -3.2, y: 1.59, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24161,12 +24169,14 @@ MonoBehaviour:
   gem: {fileID: 1686708516}
   mainMenuGems: {fileID: 0}
   levelSelectGems: {fileID: 0}
+  spawnGems: {fileID: 0}
   audioSrc: {fileID: 1137115742}
   anim: {fileID: 0}
   gemHitSFX: {fileID: 8300000, guid: a3260b6f2f81b443c9a50a4222b21f64, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &1686708519
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -30194,12 +30204,14 @@ MonoBehaviour:
   gem: {fileID: 2014671831}
   mainMenuGems: {fileID: 548911488}
   levelSelectGems: {fileID: 813358090}
+  spawnGems: {fileID: 0}
   audioSrc: {fileID: 1137115742}
   anim: {fileID: 813358092}
   gemHitSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
   gemBreakSFX: {fileID: 8300000, guid: 7743889c22ea9472a895ecd63b2bb221, type: 3}
   speed: 0
   angularSpeed: 0
+  spawnManager: {fileID: 0}
 --- !u!199 &2014671835
 ParticleSystemRenderer:
   serializedVersion: 6

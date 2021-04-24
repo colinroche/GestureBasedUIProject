@@ -66,6 +66,8 @@ public class GemBehaviour : MonoBehaviour
             else if (gameObject.tag == "Bomb")
             {
                 gemValue = 0;
+                gemExplosion.Play();
+                audioSrc.PlayOneShot(gemBreakSFX);
                 FindObjectOfType<GameSession>().BombCheck();
             }
             FindObjectOfType<GameSession>().AddScore(gemValue);
