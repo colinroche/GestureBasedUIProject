@@ -12,8 +12,8 @@ public class CountdownTimer : MonoBehaviour
 
 
     float currentTime;
-    float startingtime = 5f;   // Amount of time player has to complete level
-    private bool gameOver = false;
+    float startingtime = 60f;   // Amount of time player has to complete level
+    bool gameOver = false;
     private bool addTen = false;
 
     [SerializeField] TextMesh countdownText;
@@ -24,8 +24,16 @@ public class CountdownTimer : MonoBehaviour
         currentTime = startingtime;
     }
 
+    public void StartTimer()
+    {
+        Instance.gameOver = false;
+        Instance.currentTime = startingtime;
+        print("Start timer ");
+    }
+
     void Update()
     {
+        print(gameOver);
         if(gameOver == false){
             currentTime -= 1 * Time.deltaTime;  // Remove a second every second
             countdownText.text =  currentTime.ToString();
@@ -43,6 +51,8 @@ public class CountdownTimer : MonoBehaviour
                 spawnGems.SetActive(false);
                 mainMenuGems.SetActive(true);
             }
+        }else{
+            currentTime = 0;
         }
     }
 

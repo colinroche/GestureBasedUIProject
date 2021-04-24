@@ -12,14 +12,7 @@ public class ArcadeGameSession : MonoBehaviour
     [SerializeField] GameObject spawnGems;
     public static ArcadeGameSession Instance;
 
-    float currentTime;
-    float startingtime = 60f;   // Amount of time player has to complete level
     private bool gameOver = false;
-    private bool addTen = false;
-
-
-    [SerializeField] TextMesh countdownText;
-
 
     int playerScore = 0;
     int bombCount = 0;
@@ -38,8 +31,6 @@ public class ArcadeGameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
-        currentTime = startingtime;
         scoreText.text = playerScore.ToString();
     }
 
@@ -60,18 +51,6 @@ public class ArcadeGameSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;  // Remove a second every second
-        countdownText.text =  currentTime.ToString();
-
-        if (currentTime <= 10)
-        {   // Warning
-            countdownText.color = Color.red;
-        }
-
-        if(currentTime <=0)
-        {
-            Instance.gameOver = true;
-        }
-        
+       
     }
 }

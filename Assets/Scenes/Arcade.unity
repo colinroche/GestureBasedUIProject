@@ -7720,6 +7720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103763695}
   - component: {fileID: 1103763694}
+  - component: {fileID: 1103763696}
   m_Layer: 0
   m_Name: GameSession
   m_TagString: Untagged
@@ -7742,7 +7743,7 @@ MonoBehaviour:
   scoreText: {fileID: 660871231}
   mainMenuGems: {fileID: 0}
   spawnGems: {fileID: 422131358}
-  countdownText: {fileID: 0}
+  countdownText: {fileID: 740359748}
 --- !u!4 &1103763695
 Transform:
   m_ObjectHideFlags: 0
@@ -7757,6 +7758,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1103763696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103763693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ebe6986553d0d489dcd57390651a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 660871231}
+  strikeLeft: {fileID: 1978499355}
+  strikeMiddle: {fileID: 1978499355}
+  strikeRight: {fileID: 1978499355}
+  mainMenuGems: {fileID: 1978499355}
+  spawnGems: {fileID: 1978499355}
 --- !u!1 &1105682791
 GameObject:
   m_ObjectHideFlags: 0
@@ -24730,6 +24749,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa8e8b4dfad849e8a6979087ea71031, type: 3}
+--- !u!1 &1978499355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1978499356}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1978499356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978499355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8438675, y: 4.031783, z: 13.5261965}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2003760305
 PrefabInstance:
   m_ObjectHideFlags: 0

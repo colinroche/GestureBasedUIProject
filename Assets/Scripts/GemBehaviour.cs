@@ -71,6 +71,7 @@ public class GemBehaviour : MonoBehaviour
                 FindObjectOfType<GameSession>().BombCheck();
             }
             FindObjectOfType<GameSession>().AddScore(gemValue);
+            FindObjectOfType<ArcadeGameSession>().AddScore(gemValue);
             Destroy(gameObject, 0.25f);
         }
     }
