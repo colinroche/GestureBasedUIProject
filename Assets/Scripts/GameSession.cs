@@ -8,6 +8,10 @@ public class GameSession : MonoBehaviour
     [Header("Player's Score")]
     [SerializeField] TextMesh scoreText;
 
+    [SerializeField] GameObject strikeLeft;
+    [SerializeField] GameObject strikeMiddle;
+    [SerializeField] GameObject strikeRight;
+
     int playerScore = 0;
     int bombCount = 0;
     int endGame = 3;
@@ -36,6 +40,19 @@ public class GameSession : MonoBehaviour
 
     public void BombCheck() {
         bombCount++;
+        if (bombCount == 1)
+        {
+            strikeLeft.SetActive(true);
+        }
+        else if (bombCount == 2)
+        {
+            strikeMiddle.SetActive(true);
+        }
+        else if (bombCount == endGame)
+        {
+            strikeRight.SetActive(true);
+        }
+
         if (bombCount >= endGame)
         {
             EndGame();
