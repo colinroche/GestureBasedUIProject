@@ -19,7 +19,6 @@ public class GemBehaviour : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Rigidbody>().useGravity = false;
-        countdownTimer = GetComponent<CountdownTimer>();
     }
 
     void Update()
@@ -76,7 +75,7 @@ public class GemBehaviour : MonoBehaviour
             else if (gameObject.tag == "Clock")
             {
                 gemValue = 0;
-                //countdownTimer.AddTenSecs();
+                countdownTimer.AddTenSecs();
             }
             FindObjectOfType<GameSession>().AddScore(gemValue);
             Destroy(gameObject, 0.25f);

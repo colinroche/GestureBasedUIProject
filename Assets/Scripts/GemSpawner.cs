@@ -109,7 +109,7 @@ public class GemSpawner : MonoBehaviour
 
     public void ClockSpawner(int numClocks)
     {
-        time = 20f;
+        time = 15f;
         Transform clocks;
         clocks = GameObject.Find("Clock").transform;
         Spawner(clocks, numClocks, time);

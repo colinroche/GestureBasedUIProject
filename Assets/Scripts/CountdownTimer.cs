@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class CountdownTimer : MonoBehaviour
 
 
     float currentTime;
-    float startingtime = 5f;   // Amount of time player has to complete level
+    float startingtime = 60f;   // Amount of time player has to complete level
     bool gameOver = false;
     private bool addTen = false;
 
@@ -27,7 +28,7 @@ public class CountdownTimer : MonoBehaviour
     public void StartTimer()
     {
         gameOver = false;
-        this.currentTime = startingtime;
+        currentTime = startingtime;
         print("Start timer ");
     }
 
@@ -35,8 +36,8 @@ public class CountdownTimer : MonoBehaviour
     {
         print(gameOver);
         if(gameOver == false){
+            countdownText.text = currentTime.ToString();
             currentTime -= 1 * Time.deltaTime;  // Remove a second every second
-            countdownText.text =  currentTime.ToString();
         
             if(currentTime <= 10)
             {   // Warning
@@ -45,17 +46,23 @@ public class CountdownTimer : MonoBehaviour
 
             if(currentTime <=0)
             {
+                // Set TimeBoard to 0
                 currentTime = 0;
-                //Instance.gameOver = true;
+                countdownText.text = currentTime.ToString();
                 gameOver = true;
+                // Reset TimeBoard
+                // currentTime = startingtime;
                 spawnGems.SetActive(false);
                 mainMenuGems.SetActive(true);
+                gameObject.SetActive(false);
+                SceneManager.LoadScene(2);
             }
         }
     }
 
     public void AddTenSecs()
     {   // Called from Item Drop
+        print("dlajfldjfaljdlfjakdjflajdflkjsdalfjasldjf");
         currentTime += 10;
         addTen = true;
     }

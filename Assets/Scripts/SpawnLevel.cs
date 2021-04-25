@@ -8,7 +8,7 @@ public class SpawnLevel : MonoBehaviour
 
     private int numGems = 0;
     private int numBombs = 7;
-    private int numClock = 3;
+    private int numClock = 4;
 
 
     // Start is called before the first frame update
