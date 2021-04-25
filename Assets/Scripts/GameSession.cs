@@ -14,7 +14,6 @@ public class GameSession : MonoBehaviour
     [SerializeField] GameObject mainMenuGems;
     [SerializeField] GameObject spawnGems;
 
-
     int playerScore = 0;
     int bombCount = 0;
     int endGame = 3;
@@ -59,6 +58,7 @@ public class GameSession : MonoBehaviour
         if (bombCount >= endGame)
         {
             EndGame();
+            bombCount = 0;
         }
     }
 

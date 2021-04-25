@@ -84,12 +84,12 @@ public class MainMenuGemBehaviour : MonoBehaviour
                     print("Start mode");
                     StartCoroutine(RemoveMenuGems());
                     spawnGems.SetActive(true);
-                    spawnManager.SpawningClassicGame();
+                    spawnManager.SpawningGame();
                 }else if(gem.tag == "StartArcade"){
                     print("Start mode");
                     StartCoroutine(RemoveMenuGems());
                     spawnGems.SetActive(true);
-                    spawnManager.SpawningClassicGame();
+                    spawnManager.SpawningGame();
                     StartCoroutine(StartTimer());
                     timeText.SetActive(true);
                     CountdownTimer countdownTimer = new CountdownTimer();

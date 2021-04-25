@@ -1107,9 +1107,10 @@ GameObject:
   - component: {fileID: 425786575}
   - component: {fileID: 425786577}
   - component: {fileID: 425786576}
+  - component: {fileID: 425786578}
   m_Layer: 0
   m_Name: Clock
-  m_TagString: Untagged
+  m_TagString: Clock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1123,7 +1124,7 @@ Transform:
   m_GameObject: {fileID: 425786573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.2556329, z: -7.760994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2049078014}
   - {fileID: 1770976054}
@@ -1176,6 +1177,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &425786578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425786573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8cef4e3d6462241a1c64b8ad937172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemExplosion: {fileID: 0}
+  gem: {fileID: 0}
+  gemBreakSFX: {fileID: 0}
+  audioSrc: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &430891210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8111,7 +8129,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1103763695}
-  - component: {fileID: 1103763694}
   - component: {fileID: 1103763696}
   m_Layer: 0
   m_Name: GameSession
@@ -8120,21 +8137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1103763694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103763693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9a65364c61bde04d96ad1a2c03276b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 660871231}
-  mainMenuGems: {fileID: 0}
-  spawnGems: {fileID: 422131358}
 --- !u!4 &1103763695
 Transform:
   m_ObjectHideFlags: 0
@@ -8165,8 +8167,8 @@ MonoBehaviour:
   strikeLeft: {fileID: 1978499355}
   strikeMiddle: {fileID: 1978499355}
   strikeRight: {fileID: 1978499355}
-  mainMenuGems: {fileID: 1978499355}
-  spawnGems: {fileID: 1978499355}
+  mainMenuGems: {fileID: 206809907}
+  spawnGems: {fileID: 422131358}
 --- !u!1 &1105682791
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSpawn : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class GameSpawn : MonoBehaviour
     SpawnLevel spawnLevel;
 
     private Vector3 position;
-    private int level = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -17,22 +17,16 @@ public class GameSpawn : MonoBehaviour
         spawnLevel = GetComponent<SpawnLevel>();
     }
 
-    public void Level1()
+    public void LevelCheck()
     {
-        LevelCheck();
-    }
-
-    private void LevelCheck()
-    {
-        if (level == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             spawnLevel.FirstLevelSpawning();
         }
-    }
-
-    public void LevelChange()
-    {
-        level++;
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            spawnLevel.SecondLevelSpawning();
+        }
     }
 
     // Update is called once per frame

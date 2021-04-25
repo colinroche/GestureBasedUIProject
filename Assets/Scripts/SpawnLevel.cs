@@ -8,6 +8,7 @@ public class SpawnLevel : MonoBehaviour
 
     private int numGems = 0;
     private int numBombs = 7;
+    private int numClock = 3;
 
 
     // Start is called before the first frame update
@@ -32,5 +33,23 @@ public class SpawnLevel : MonoBehaviour
         gemSpawner.GemPurpleSpawner(numGems);
 
         gemSpawner.BombSpawner(numBombs);
+    }
+
+     public void SecondLevelSpawning()
+    {
+        numGems = 50;
+
+        gemSpawner.GemWhiteSpawner(numGems);
+
+        numGems = 20;
+        gemSpawner.GemYellowSpawner(numGems);
+
+        numGems = 10;
+        gemSpawner.GemBlueSpawner(numGems);
+
+        numGems = 5;
+        gemSpawner.GemPurpleSpawner(numGems);
+
+        gemSpawner.ClockSpawner(numClock);
     }
 }

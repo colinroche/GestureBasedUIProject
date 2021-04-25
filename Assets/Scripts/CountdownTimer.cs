@@ -56,12 +56,9 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 
-    public static void AddTenSecs()
+    public void AddTenSecs()
     {   // Called from Item Drop
         Instance.currentTime += 10;
         Instance.addTen = true;
     }
-
-
-   
 }

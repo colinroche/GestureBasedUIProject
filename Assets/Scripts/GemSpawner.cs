@@ -106,4 +106,12 @@ public class GemSpawner : MonoBehaviour
         bombs = GameObject.Find("Bomb").transform;
         Spawner(bombs, numBombs, time);
     }
+
+    public void ClockSpawner(int numClocks)
+    {
+        time = 20f;
+        Transform clocks;
+        clocks = GameObject.Find("Clock").transform;
+        Spawner(clocks, numClocks, time);
+    }
 }

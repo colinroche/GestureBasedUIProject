@@ -17,9 +17,9 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    public void SpawningClassicGame()
+    public void SpawningGame()
     {
         Debug.Log("Checker");
-        gameSpawn.Level1();
+        gameSpawn.LevelCheck();
     }
 }

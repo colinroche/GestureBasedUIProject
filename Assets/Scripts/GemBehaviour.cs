@@ -10,6 +10,8 @@ public class GemBehaviour : MonoBehaviour
 
     [SerializeField] AudioSource audioSrc;
     [SerializeField] Animation anim;
+
+    public CountdownTimer countdownTimer;
     private float speed = 1f;
     private float rotateSpeed = 100f;
     private int gemValue = 0;
@@ -17,6 +19,7 @@ public class GemBehaviour : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Rigidbody>().useGravity = false;
+        countdownTimer = GetComponent<CountdownTimer>();
     }
 
     void Update()
@@ -70,8 +73,12 @@ public class GemBehaviour : MonoBehaviour
                 audioSrc.PlayOneShot(gemBreakSFX);
                 FindObjectOfType<GameSession>().BombCheck();
             }
+            else if (gameObject.tag == "Clock")
+            {
+                gemValue = 0;
+                //countdownTimer.AddTenSecs();
+            }
             FindObjectOfType<GameSession>().AddScore(gemValue);
-            FindObjectOfType<ArcadeGameSession>().AddScore(gemValue);
             Destroy(gameObject, 0.25f);
         }
     }
