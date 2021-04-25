@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Imports\Clock\Scripts\Clock.cs" />
      <Compile Include="Assets\Imports\DepthColliderDemo\Scripts\DepthImageViewer.cs" />
      <Compile Include="Assets\Imports\DepthColliderDemo\Scripts\EggMover.cs" />
      <Compile Include="Assets\Imports\DepthColliderDemo\Scripts\EggSpawner.cs" />
@@ -109,6 +110,7 @@
      <Compile Include="Assets\Scripts\ArcadeGameSession.cs" />
      <Compile Include="Assets\Scripts\CountdownTimer.cs" />
      <Compile Include="Assets\Scripts\Dropdown.cs" />
+     <Compile Include="Assets\Scripts\GameHintChanger.cs" />
      <Compile Include="Assets\Scripts\GameSession.cs" />
      <Compile Include="Assets\Scripts\GameSpawn.cs" />
      <Compile Include="Assets\Scripts\GameSpeechRecognition.cs" />
