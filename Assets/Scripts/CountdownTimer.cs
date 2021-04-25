@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public static CountdownTimer Instance;
+    //public static CountdownTimer Instance;
     [SerializeField] GameObject mainMenuGems;
     [SerializeField] GameObject spawnGems;
 
 
     float currentTime;
-    float startingtime = 60f;   // Amount of time player has to complete level
+    float startingtime = 5f;   // Amount of time player has to complete level
     bool gameOver = false;
     private bool addTen = false;
 
@@ -20,14 +20,14 @@ public class CountdownTimer : MonoBehaviour
 
     void Start()
     {
-        Instance = this;
+        //Instance = this;
         currentTime = startingtime;
     }
 
     public void StartTimer()
     {
-        Instance.gameOver = false;
-        Instance.currentTime = startingtime;
+        gameOver = false;
+        this.currentTime = startingtime;
         print("Start timer ");
     }
 
@@ -46,19 +46,17 @@ public class CountdownTimer : MonoBehaviour
             if(currentTime <=0)
             {
                 currentTime = 0;
-                Instance.gameOver = true;
+                //Instance.gameOver = true;
                 gameOver = true;
                 spawnGems.SetActive(false);
                 mainMenuGems.SetActive(true);
             }
-        }else{
-            currentTime = 0;
         }
     }
 
     public void AddTenSecs()
     {   // Called from Item Drop
-        Instance.currentTime += 10;
-        Instance.addTen = true;
+        currentTime += 10;
+        addTen = true;
     }
 }
