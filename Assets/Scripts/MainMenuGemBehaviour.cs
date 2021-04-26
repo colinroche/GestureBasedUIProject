@@ -56,19 +56,18 @@ public class MainMenuGemBehaviour : MonoBehaviour
                 gemExplosion = GetComponent<ParticleSystem>();
                 audioSrc.PlayOneShot(gemBreakSFX);
                 gemExplosion.Play();
+                
+                 // Main Menu
                 if(gem.tag == "Play"){
                     print("play");
                     mainMenuGems.SetActive(false);
                     levelSelectGems.SetActive(true);
                     anim.Play();
-                }else if(gem.tag == "Volume"){
-                    print("volume");
-                    mainMenuGems.SetActive(false);
-                    levelSelectGems.SetActive(true);
-                    anim.Play();
                 }else if(gem.tag == "Exit"){
                     print("exit");
-                }else if(gem.tag == "Classic"){
+                }
+                 // Level Select
+                else if(gem.tag == "Classic"){
                     print("classic");
                     Destroy(gameObject, 2.0f);
                     SceneManager.LoadScene(1);
@@ -80,7 +79,9 @@ public class MainMenuGemBehaviour : MonoBehaviour
                     print("zed mode");
                     Destroy(gameObject, 2.0f);
                     SceneManager.LoadScene(3);
-                }else if(gem.tag == "Start"){
+                }
+                 // Game Gems
+                else if(gem.tag == "Start"){
                     print("Start mode");
                     StartCoroutine(RemoveMenuGems());
                     spawnGems.SetActive(true);
@@ -95,7 +96,7 @@ public class MainMenuGemBehaviour : MonoBehaviour
                     FindObjectOfType<GameSession>().StartTimer();
                 }else if(gem.tag == "MainMenu"){
                     print("MainMenu mode");
-                    StartCoroutine(RemoveMenuGems());
+                   SceneManager.LoadScene(0);
                 }
 
             }

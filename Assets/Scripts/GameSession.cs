@@ -23,7 +23,7 @@ public class GameSession : MonoBehaviour
     int endGame = 3;
     int currentLevel;
     float currentTime;
-    float startingtime = 60f;   // Amount of time player has to complete level
+    float startingtime = 6f;   // Amount of time player has to complete level
     bool gameOver = false;
     private bool addTen = false;
     /*private void Awake()
@@ -136,8 +136,6 @@ public class GameSession : MonoBehaviour
         }
        
         SceneManager.LoadScene(currentLevel);
-        //mainMenuGems.SetActive(true);
-        //spawnGems.SetActive(false);
     }
 
      public void Countdown()
@@ -157,8 +155,7 @@ public class GameSession : MonoBehaviour
 
                 if(currentTime <=0)
                 {  
-                    GameSession gameSession = new GameSession();
-                    gameSession.EndGame();
+                    EndGame();
                 }
             }
         }

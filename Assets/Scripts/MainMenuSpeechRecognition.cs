@@ -73,8 +73,6 @@ public class MainMenuSpeechRecognition : MonoBehaviour
     }
     private void GameUI()
     {
-        print("gooo");
-        UIToggle.SetActive(!spaceBool);
         UIToggle.SetActive(!spaceBool);
         spaceBool = !spaceBool;
     }

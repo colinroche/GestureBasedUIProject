@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             UIToggle.SetActive(!spaceBool);
-            UIToggle.SetActive(!spaceBool);
             spaceBool = !spaceBool;
         }     
     }
@@ -35,17 +34,17 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void EasyLevel ()
+    public void Classic ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
     }
 
-    public void MediumLevel ()
+    public void Arcade ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 2);
     }
 
-    public void HardLevel ()
+    public void Zen ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 3);
     }

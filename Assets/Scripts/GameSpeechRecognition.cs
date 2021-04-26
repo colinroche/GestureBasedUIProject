@@ -97,15 +97,18 @@ public class GameSpeechRecognition : MonoBehaviour
     }
     private void Pause()
     {
+        Time.timeScale = 0;
         PauseMenu.SetActive(true);
     }
     private void Resume()
     {
+        Time.timeScale = 1;
         PauseMenu.SetActive(false);
     }
 
     private void Menu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
     private void Quit()
