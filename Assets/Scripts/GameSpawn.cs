@@ -17,6 +17,7 @@ public class GameSpawn : MonoBehaviour
         spawnLevel = GetComponent<SpawnLevel>();
     }
 
+    // Calling the spawning for the appropriate level by checking the scene
     public void LevelCheck()
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -29,7 +30,7 @@ public class GameSpawn : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            //spawnLevel.ThirdLevelSpawning();
+            spawnLevel.ThirdLevelSpawning();
         }
     }
 }

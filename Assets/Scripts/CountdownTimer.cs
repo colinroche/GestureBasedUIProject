@@ -13,7 +13,7 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] TextMesh countdownText;
 
     float currentTime;
-    float startingtime = 10f;   // Amount of time player has to complete level
+    float startingtime = 60f;   // Amount of time player has to complete level
     bool gameOver = false;
     private bool addTen = false;
 
@@ -28,6 +28,12 @@ public class CountdownTimer : MonoBehaviour
         gameOver = false;
         currentTime = startingtime;
         print("Start timer ");
+    }
+
+       public void AddTenSecs()
+    {   // Called from Item Drop
+        currentTime += 10;
+        addTen = true;
     }
 
     void Update()
@@ -58,11 +64,5 @@ public class CountdownTimer : MonoBehaviour
                 gameSession.EndGame();
             }
         }
-    }
-
-    public void AddTenSecs()
-    {   // Called from Item Drop
-        currentTime += 10;
-        addTen = true;
     }
 }

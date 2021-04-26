@@ -20,24 +20,16 @@ public class GemSpawner : MonoBehaviour
     private int blueGem = 20;
     private int purpleGem = 50;
 
-    [SerializeField] GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int numGems = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] GameObject player;
 
     public void Spawner(Transform transform, int numOfObjects, float time)
     {
         StartCoroutine(SpawnTimer(transform, numOfObjects, time));
     }
-
+    
+    // Spawns the relevent object in a semi-circle around the player
     IEnumerator SpawnTimer(Transform transform, int numOfObjects, float time)
     {
         int spawned = 0;
@@ -67,49 +59,45 @@ public class GemSpawner : MonoBehaviour
         }    
     }
 
-    public void GemWhiteSpawner(int numGems)
+    // Methods for spawning the relevent gems/bombs/clocks.
+
+    public void GemWhiteSpawner(int numGems, float time)
     {
-        time = 1.2f;
         Transform gems;
         gems = GameObject.Find("GemWhite").transform;
         Spawner(gems, numGems, time);
     }
 
-    public void GemYellowSpawner(int numGems)
+    public void GemYellowSpawner(int numGems, float time)
     {
-        time = 3f;
         Transform gems;
         gems = GameObject.Find("GemYellow").transform;
         Spawner(gems, numGems, time);
     }
 
-    public void GemBlueSpawner(int numGems)
+    public void GemBlueSpawner(int numGems, float time)
     {
-        time = 6f;
         Transform gems;
         gems = GameObject.Find("GemBlue").transform;
         Spawner(gems, numGems, time);
     }
 
-    public void GemPurpleSpawner(int numGems)
+    public void GemPurpleSpawner(int numGems, float time)
     {
-        time = 10f;
         Transform gems;
         gems = GameObject.Find("GemPurple").transform;
         Spawner(gems, numGems, time);
     }
 
-    public void BombSpawner(int numBombs)
+    public void BombSpawner(int numBombs, float time)
     {
-        time = 8f;
         Transform bombs;
         bombs = GameObject.Find("Bomb").transform;
         Spawner(bombs, numBombs, time);
     }
 
-    public void ClockSpawner(int numClocks)
+    public void ClockSpawner(int numClocks, float time)
     {
-        time = 15f;
         Transform clocks;
         clocks = GameObject.Find("Clock").transform;
         Spawner(clocks, numClocks, time);

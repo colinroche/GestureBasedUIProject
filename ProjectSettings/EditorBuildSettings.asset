@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arcade.unity
     guid: 89718556be4b3974dbc3262855e29ede
+  - enabled: 1
+    path: Assets/Scenes/ZenMode.unity
+    guid: a8e875c79b66a6142b6137680dec4359
   m_configObjects: {}

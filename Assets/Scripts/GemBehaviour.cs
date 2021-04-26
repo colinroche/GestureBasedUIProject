@@ -21,12 +21,14 @@ public class GemBehaviour : MonoBehaviour
         gameObject.GetComponent<Rigidbody>().useGravity = false;
     }
 
+    // Set the rotation and movement of the gem
     void Update()
     {
         this.transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         this.transform.Translate(Vector3.up * Time.deltaTime* speed);
     }
 
+    // Checks the tag that is collided with to preform the appropriate action to the gem
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "MaxHeight")
