@@ -27,11 +27,9 @@ public class GameSpawn : MonoBehaviour
         {
             spawnLevel.SecondLevelSpawning();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            spawnLevel.ThirdLevelSpawning();
+        }
     }
 }
