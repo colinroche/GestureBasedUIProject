@@ -17,17 +17,17 @@ public class GameSession : MonoBehaviour
     int playerScore = 0;
     int bombCount = 0;
     int endGame = 3;
-    private void Awake()
+    /*private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
         if (numGameSession > 1)
         {
             Destroy(gameObject);
         }
-        else {
+        /*else {
             DontDestroyOnLoad(gameObject);
         }
-    }
+    }*/
     // Start is called before the first frame update
     void Start()
     {
@@ -66,12 +66,5 @@ public class GameSession : MonoBehaviour
     {
         mainMenuGems.SetActive(true);
         spawnGems.SetActive(false);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

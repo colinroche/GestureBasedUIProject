@@ -10,14 +10,12 @@ public class CountdownTimer : MonoBehaviour
     //public static CountdownTimer Instance;
     [SerializeField] GameObject mainMenuGems;
     [SerializeField] GameObject spawnGems;
-
+    [SerializeField] TextMesh countdownText;
 
     float currentTime;
     float startingtime = 60f;   // Amount of time player has to complete level
     bool gameOver = false;
     private bool addTen = false;
-
-    [SerializeField] TextMesh countdownText;
 
     void Start()
     {
@@ -62,7 +60,6 @@ public class CountdownTimer : MonoBehaviour
 
     public void AddTenSecs()
     {   // Called from Item Drop
-        print("dlajfldjfaljdlfjakdjflajdflkjsdalfjasldjf");
         currentTime += 10;
         addTen = true;
     }
