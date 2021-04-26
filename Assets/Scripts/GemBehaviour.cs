@@ -11,7 +11,6 @@ public class GemBehaviour : MonoBehaviour
     [SerializeField] AudioSource audioSrc;
     [SerializeField] Animation anim;
 
-    public CountdownTimer countdownTimer;
     private float speed = 1f;
     private float rotateSpeed = 100f;
     private int gemValue = 0;
@@ -63,7 +62,7 @@ public class GemBehaviour : MonoBehaviour
             else if (gameObject.tag == "Clock")
             {
                 gemValue = 0;
-                countdownTimer.AddTenSecs();
+                FindObjectOfType<GameSession>().AddTenSecs();
             }
             gemExplosion = GetComponent<ParticleSystem>();
             audioSrc.PlayOneShot(gemBreakSFX);

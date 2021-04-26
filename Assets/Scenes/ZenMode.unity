@@ -849,7 +849,6 @@ MonoBehaviour:
   gemBreakSFX: {fileID: 8300000, guid: 0f579092c76764d8e8df04853e9a2c13, type: 3}
   audioSrc: {fileID: 1959126818}
   anim: {fileID: 0}
-  countdownTimer: {fileID: 0}
 --- !u!199 &193663149
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5524,6 +5523,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!102 &210730866 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 4830458400210442445, guid: 594030b0ef8895b4e9f1edba02539677,
+    type: 3}
+  m_PrefabInstance: {fileID: 223291321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &211658570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5727,6 +5732,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 38.99, z: 0}
+--- !u!1001 &223291321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4830458399529764732, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_Name
+      value: Highscore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830458399529764733, guid: 594030b0ef8895b4e9f1edba02539677,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 594030b0ef8895b4e9f1edba02539677, type: 3}
 --- !u!1 &262545900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6462,7 +6536,6 @@ MonoBehaviour:
   gemBreakSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
   audioSrc: {fileID: 1959126818}
   anim: {fileID: 0}
-  countdownTimer: {fileID: 0}
 --- !u!199 &511500546
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -11689,7 +11762,6 @@ MonoBehaviour:
   gemBreakSFX: {fileID: 8300000, guid: 2c6bf6490e5d749bf94eb110314aad49, type: 3}
   audioSrc: {fileID: 1959126818}
   anim: {fileID: 0}
-  countdownTimer: {fileID: 0}
 --- !u!1 &621862541
 GameObject:
   m_ObjectHideFlags: 0
@@ -13393,7 +13465,6 @@ MonoBehaviour:
   gemBreakSFX: {fileID: 8300000, guid: 5543cefa2f8fc9e40bb3b5af6eac40ad, type: 3}
   audioSrc: {fileID: 1959126818}
   anim: {fileID: 0}
-  countdownTimer: {fileID: 0}
 --- !u!65 &1063639016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13992,7 +14063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235696174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.53, y: 2.3, z: 1.11}
+  m_LocalPosition: {x: -1.804, y: 2.3, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14976,7 +15047,6 @@ MonoBehaviour:
   gemBreakSFX: {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
   audioSrc: {fileID: 1959126818}
   anim: {fileID: 0}
-  countdownTimer: {fileID: 0}
 --- !u!199 &1459312884
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -20848,7 +20918,6 @@ MonoBehaviour:
   gemBreakSFX: {fileID: 8300000, guid: a3260b6f2f81b443c9a50a4222b21f64, type: 3}
   audioSrc: {fileID: 1959126818}
   anim: {fileID: 0}
-  countdownTimer: {fileID: 0}
 --- !u!199 &1650838856
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -25591,6 +25660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 99771854}
+  highScoreText: {fileID: 210730866}
+  countdownText: {fileID: 569994384}
   strikeLeft: {fileID: 957484655}
   strikeMiddle: {fileID: 957484655}
   strikeRight: {fileID: 957484655}
@@ -25654,9 +25725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692a724a0fd94a468abdefa290e98e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuGems: {fileID: 1331353201}
-  spawnGems: {fileID: 154428878}
-  countdownText: {fileID: 569994384}
 --- !u!1001 &1710568874
 PrefabInstance:
   m_ObjectHideFlags: 0

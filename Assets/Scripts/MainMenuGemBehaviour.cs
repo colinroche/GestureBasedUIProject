@@ -92,8 +92,7 @@ public class MainMenuGemBehaviour : MonoBehaviour
                     spawnManager.SpawningGame();
                     StartCoroutine(StartTimer());
                     timeText.SetActive(true);
-                    CountdownTimer countdownTimer = new CountdownTimer();
-                    countdownTimer.StartTimer();
+                    FindObjectOfType<GameSession>().StartTimer();
                 }else if(gem.tag == "MainMenu"){
                     print("MainMenu mode");
                     StartCoroutine(RemoveMenuGems());

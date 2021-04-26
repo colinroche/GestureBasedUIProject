@@ -8,6 +8,7 @@ public class GameSession : MonoBehaviour
     [Header("Player's Score")]
     [SerializeField] TextMesh scoreText;
     [SerializeField] TextMesh highScoreText;
+    [SerializeField] TextMesh countdownText;
 
 
     [SerializeField] GameObject strikeLeft;
@@ -20,7 +21,11 @@ public class GameSession : MonoBehaviour
     int highscore = 0;
     int bombCount = 0;
     int endGame = 3;
-    int currentLevel = 0;
+    int currentLevel;
+    float currentTime;
+    float startingtime = 60f;   // Amount of time player has to complete level
+    bool gameOver = false;
+    private bool addTen = false;
     /*private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -48,6 +53,8 @@ public class GameSession : MonoBehaviour
         {
             highscore = PlayerPrefs.GetInt("ZenHigh", 0);
         }
+        //Instance = this;
+        currentTime = startingtime;
         scoreText.text = playerScore.ToString();
         highScoreText.text = highscore.ToString();
     }
@@ -131,5 +138,47 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene(currentLevel);
         //mainMenuGems.SetActive(true);
         //spawnGems.SetActive(false);
+    }
+
+     public void Countdown()
+    {
+        LevelCheck();
+        if(currentLevel == 2 || currentLevel == 3)
+        {
+            print(gameOver);
+            if(gameOver == false){
+                countdownText.text = currentTime.ToString();
+                currentTime -= 1 * Time.deltaTime;  // Remove a second every second
+            
+                if(currentTime <= 10)
+                {   // Warning
+                    countdownText.color = Color.red;
+                }
+
+                if(currentTime <=0)
+                {  
+                    GameSession gameSession = new GameSession();
+                    gameSession.EndGame();
+                }
+            }
+        }
+    }
+
+    public void StartTimer()
+    {
+        gameOver = false;
+        currentTime = startingtime;
+        print("Start timer ");
+    }
+
+    public void AddTenSecs()
+    {   // Called from Item Drop
+        currentTime += 10;
+        addTen = true;
+    }
+
+    void Update()
+    {
+        Countdown();
     }
 }
