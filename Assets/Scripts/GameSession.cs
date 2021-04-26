@@ -17,9 +17,10 @@ public class GameSession : MonoBehaviour
     [SerializeField] GameObject spawnGems;
 
     int playerScore = 0;
-    int classicHighscore = 0;
+    int highscore = 0;
     int bombCount = 0;
     int endGame = 3;
+    int currentLevel = 0;
     /*private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -34,9 +35,21 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        classicHighscore = PlayerPrefs.GetInt("ClassicHigh", 0);
+        LevelCheck();
+        if(currentLevel == 1)
+        {
+            highscore = PlayerPrefs.GetInt("ClassicHigh", 0);
+        }
+        else if(currentLevel == 2)
+        {
+            highscore = PlayerPrefs.GetInt("ArcadeHigh", 0);
+        }
+        else if(currentLevel == 3)
+        {
+            highscore = PlayerPrefs.GetInt("ZenHigh", 0);
+        }
         scoreText.text = playerScore.ToString();
-        highScoreText.text = classicHighscore.ToString();
+        highScoreText.text = highscore.ToString();
     }
 
     public void AddScore(int scoreValue)
@@ -66,17 +79,57 @@ public class GameSession : MonoBehaviour
             bombCount = 0;
         }
     }
-
+    public void LevelCheck()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            currentLevel = 1;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            currentLevel = 2;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            currentLevel = 3;
+        }
+    }
     public void EndGame()
     {
-        if(playerScore > classicHighscore)
+        LevelCheck();
+        if(currentLevel == 1)
         {
-            classicHighscore = playerScore;
-            highScoreText.text = classicHighscore.ToString();
-            PlayerPrefs.SetInt("ClassicHigh", classicHighscore);
-            SceneManager.LoadScene(1);
+            if(playerScore >  PlayerPrefs.GetInt("ClassicHigh", 0))
+            {
+                print("classic");
+                highscore = playerScore;
+                highScoreText.text = highscore.ToString();
+                PlayerPrefs.SetInt("ClassicHigh", highscore);
+            }
         }
-        mainMenuGems.SetActive(true);
-        spawnGems.SetActive(false);
+        else if(currentLevel == 2)
+        {
+            print("2");
+            if(playerScore >  PlayerPrefs.GetInt("ArcadeHigh", 0))
+            {
+                print("arcade");
+                highscore = playerScore;
+                highScoreText.text = highscore.ToString();
+                PlayerPrefs.SetInt("ArcadeHigh", highscore);
+            }
+        }
+        else if(currentLevel == 3)
+        {
+            if(playerScore >  PlayerPrefs.GetInt("ZenHigh", 0))
+            {
+                highscore = playerScore;
+                highScoreText.text = highscore.ToString();
+                PlayerPrefs.SetInt("ZenHigh", highscore);
+            }
+        }
+       
+        SceneManager.LoadScene(currentLevel);
+        //mainMenuGems.SetActive(true);
+        //spawnGems.SetActive(false);
     }
 }
