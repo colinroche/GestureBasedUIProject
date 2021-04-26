@@ -23,9 +23,10 @@ public class GameSession : MonoBehaviour
     int endGame = 3;
     int currentLevel;
     float currentTime;
-    float startingtime = 6f;   // Amount of time player has to complete level
+    float startingtime = 60f;   // Amount of time player has to complete level
     bool gameOver = false;
     private bool addTen = false;
+    
     /*private void Awake()
     {
         int numGameSession = FindObjectsOfType<GameSession>().Length;
@@ -54,7 +55,7 @@ public class GameSession : MonoBehaviour
             highscore = PlayerPrefs.GetInt("ZenHigh", 0);
         }
         //Instance = this;
-        currentTime = startingtime;
+        currentTime = Mathf.RoundToInt(startingtime);
         scoreText.text = playerScore.ToString();
         highScoreText.text = highscore.ToString();
     }
@@ -103,6 +104,7 @@ public class GameSession : MonoBehaviour
     }
     public void EndGame()
     {
+        print("Endgame");
         LevelCheck();
         if(currentLevel == 1)
         {
@@ -134,7 +136,6 @@ public class GameSession : MonoBehaviour
                 PlayerPrefs.SetInt("ZenHigh", highscore);
             }
         }
-       
         SceneManager.LoadScene(currentLevel);
     }
 
@@ -143,7 +144,6 @@ public class GameSession : MonoBehaviour
         LevelCheck();
         if(currentLevel == 2 || currentLevel == 3)
         {
-            print(gameOver);
             if(gameOver == false){
                 countdownText.text = currentTime.ToString();
                 currentTime -= 1 * Time.deltaTime;  // Remove a second every second
