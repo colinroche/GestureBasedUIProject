@@ -29,7 +29,7 @@ public class GameSpawn : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            spawnLevel.ThirdLevelSpawning();
+            //spawnLevel.ThirdLevelSpawning();
         }
     }
 }

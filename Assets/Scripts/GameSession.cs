@@ -7,6 +7,8 @@ public class GameSession : MonoBehaviour
 {
     [Header("Player's Score")]
     [SerializeField] TextMesh scoreText;
+    [SerializeField] TextMesh highScoreText;
+
 
     [SerializeField] GameObject strikeLeft;
     [SerializeField] GameObject strikeMiddle;
@@ -15,6 +17,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] GameObject spawnGems;
 
     int playerScore = 0;
+    int classicHighscore = 0;
     int bombCount = 0;
     int endGame = 3;
     /*private void Awake()
@@ -31,7 +34,9 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        classicHighscore = PlayerPrefs.GetInt("ClassicHigh", 0);
         scoreText.text = playerScore.ToString();
+        highScoreText.text = classicHighscore.ToString();
     }
 
     public void AddScore(int scoreValue)
@@ -64,6 +69,13 @@ public class GameSession : MonoBehaviour
 
     public void EndGame()
     {
+        if(playerScore > classicHighscore)
+        {
+            classicHighscore = playerScore;
+            highScoreText.text = classicHighscore.ToString();
+            PlayerPrefs.SetInt("ClassicHigh", classicHighscore);
+            SceneManager.LoadScene(1);
+        }
         mainMenuGems.SetActive(true);
         spawnGems.SetActive(false);
     }

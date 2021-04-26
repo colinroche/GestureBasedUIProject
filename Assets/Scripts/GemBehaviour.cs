@@ -40,36 +40,22 @@ public class GemBehaviour : MonoBehaviour
             if (gameObject.tag == "White")
             {
                 gemValue = 5;
-                gemExplosion = GetComponent<ParticleSystem>();
-                audioSrc.PlayOneShot(gemBreakSFX);
-                gemExplosion.Play();
             }
             else if (gameObject.tag == "Yellow")
             {
                 gemValue = 10;
-                gemExplosion = GetComponent<ParticleSystem>();
-                audioSrc.PlayOneShot(gemBreakSFX);
-                gemExplosion.Play();
             }
             else if (gameObject.tag == "Blue")
             {
                 gemValue = 20;
-                gemExplosion = GetComponent<ParticleSystem>();
-                audioSrc.PlayOneShot(gemBreakSFX);
-                gemExplosion.Play();
             }
             else if (gameObject.tag == "Purple")
             {
                 gemValue = 50;
-                gemExplosion = GetComponent<ParticleSystem>();
-                audioSrc.PlayOneShot(gemBreakSFX);
-                gemExplosion.Play();
             }
             else if (gameObject.tag == "Bomb")
             {
                 gemValue = 0;
-                gemExplosion.Play();
-                audioSrc.PlayOneShot(gemBreakSFX);
                 FindObjectOfType<GameSession>().BombCheck();
             }
             else if (gameObject.tag == "Clock")
@@ -77,6 +63,9 @@ public class GemBehaviour : MonoBehaviour
                 gemValue = 0;
                 countdownTimer.AddTenSecs();
             }
+            gemExplosion = GetComponent<ParticleSystem>();
+            audioSrc.PlayOneShot(gemBreakSFX);
+            gemExplosion.Play();
             FindObjectOfType<GameSession>().AddScore(gemValue);
             Destroy(gameObject, 0.25f);
         }
