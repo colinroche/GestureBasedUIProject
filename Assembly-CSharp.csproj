@@ -126,10 +126,8 @@
      <Compile Include="Assets\Scripts\VolumeSlider.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\StreamingAssets\SimpleGrammar.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
-     <None Include="Assets\StreamingAssets\SRGSColors.xml" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -145,7 +143,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\StreamingAssets\TicTacToeGrammar.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -723,19 +720,9 @@
       <Name>Unity.CollabProxy.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="com.unity.postprocessing.Editor.csproj">
-      <Project>{a28a3a87-44f5-3ced-12b5-6d641d5c6e53}</Project>
-      <Name>com.unity.postprocessing.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{8a1e03de-096f-5b81-4e61-2eacfc37eda4}</Project>
       <Name>Unity.Rider.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.postprocessing.Runtime.csproj">
-      <Project>{b2d15b39-3fd4-168f-dde3-4628faf88596}</Project>
-      <Name>com.unity.postprocessing.Runtime</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">

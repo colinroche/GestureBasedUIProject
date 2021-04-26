@@ -30,17 +30,5 @@ public class GameHintChanger : MonoBehaviour
         i++;
     }
 
-    public void GameHint()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetMouseButton(0))
-        {
-            GameHint();
-        }
-        
-    }
+   
 }
