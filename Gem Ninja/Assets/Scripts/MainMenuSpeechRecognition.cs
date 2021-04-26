@@ -100,16 +100,19 @@ public class MainMenuSpeechRecognition : MonoBehaviour
 
     private void Arcade()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
     }
   
     private void Classic()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 2);
     }
 
     private void Zen()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 3);
     }
 
